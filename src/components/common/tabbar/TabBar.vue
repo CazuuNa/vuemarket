@@ -1,25 +1,43 @@
 <template>
-  <div id="ta-bar">
-    <slot></slot>
+  <div class="tab-bar">
+    <van-tabbar
+      :border="false"
+      :z-index="100"
+      active-color="#ff8198"
+      replace
+      route
+      v-model="active"
+    >
+      <van-tabbar-item icon="wap-home" to="/">首页</van-tabbar-item>
+      <van-tabbar-item icon="shop" to="/category">分类</van-tabbar-item>
+      <van-tabbar-item icon="shopping-cart" to="/cart">购物车</van-tabbar-item>
+      <van-tabbar-item icon="manager" to="/profile">我的</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
 <script>
   export default {
-    name: "TabBar"
-  }
+    name: "TabBar",
+    data() {
+      return {
+        active: 0
+      };
+    }
+  };
 </script>
 
 <style scoped>
-  @import "../../../assets/css/base.css";
-  #ta-bar{
-    display: flex;
+  /deep/ .van-tabbar {
+    border-top: 1px solid #cccccc;
     background-color: #f6f6f6;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 -3px 1px rgba(100,100,100,0.1);
   }
 
+  /deep/ .van-tabbar-item {
+    font-size: 13px;
+  }
+
+  /deep/ .van-tabbar-item__icon {
+    font-size: 22px;
+  }
 </style>

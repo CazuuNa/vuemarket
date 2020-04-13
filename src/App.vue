@@ -1,20 +1,18 @@
 <template>
-  <div id="app">
-   <main-tab-bar></main-tab-bar>
-    <router-view></router-view>
+  <div class="shop-container">
+    <keep-alive exclude="ProductDetail">
+      <router-view />
+    </keep-alive>
+    <!-- 控制tabBar显示和隐藏 -->
+    <tab-bar v-show="$store.getters.tabBarShow" />
   </div>
 </template>
 
 <script>
-import MainTabBar from 'components/common/MainTabBar'
-export default {
-  name: 'App',
-  components: {
-    MainTabBar
-  }
-}
-</script>
+  import TabBar from "@/components/common/tabbar/TabBar";
 
-<style>
-  @import "assets/css/base.css";
-</style>
+  export default {
+    name: "App",
+    components: { TabBar }
+  };
+</script>
