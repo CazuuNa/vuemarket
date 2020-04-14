@@ -14,6 +14,7 @@ module.exports = {
         vue: "Vue",
         "better-scroll": "BScroll",
         vant: "vant"
+
       });
 
       // 是否发布模式,是

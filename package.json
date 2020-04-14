@@ -29,5 +29,6 @@
     "last 5 versions",
     "ios >= 7.0",
     "android >= 4.0"
+
   ]
 }
