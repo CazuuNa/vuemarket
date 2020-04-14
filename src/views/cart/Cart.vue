@@ -10,6 +10,7 @@
     </nav-bar>
     <!-- 购物车列表 -->
     <cart-list />
+
   </div>
 </template>
 

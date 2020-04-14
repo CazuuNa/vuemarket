@@ -9,6 +9,7 @@ export default {
         return item.id === data.id;
       });
 
+
       // 利用actions分发多个commit事件用于调试
       if (result) {
         commit("addCounter", result);

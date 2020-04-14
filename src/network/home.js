@@ -9,4 +9,5 @@ export function getHomeGoodsData(type, page) {
     url: "/home/data",
     params: { type, page }
   }).catch(err => err);
+
 }

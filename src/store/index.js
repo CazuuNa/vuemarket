@@ -13,6 +13,7 @@ const state = {
   cartList: [],
   // 是否开启请求加载
   isLoading: true
+
 };
 
 export default new Vuex.Store({

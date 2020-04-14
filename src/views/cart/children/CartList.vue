@@ -1,6 +1,7 @@
 <template>
   <div class="cart-list">
     <scroll class="scroll-height" ref="scroll">
+
       <!-- 循环部分 -->
       <div :key="index" class="shop-item" v-for="(item, index) in cartList">
         <div class="item-selector">

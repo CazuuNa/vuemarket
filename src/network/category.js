@@ -9,6 +9,7 @@ export function getSubcategory(maitKey) {
     url: "/subcategory",
     params: {
       maitKey
+
     }
   }).catch(err => err);
 }

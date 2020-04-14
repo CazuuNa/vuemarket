@@ -9,6 +9,7 @@ import {
 import { Toast } from "vant";
 
 export default {
+
   // 设置tabBar显示和隐藏
   [SET_TABBAR_SHOW](state, bol) {
     state.tabBarShow = bol;

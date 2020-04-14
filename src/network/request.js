@@ -2,8 +2,8 @@ import axios from "axios";
 import { Toast } from "vant";
 import Loading from "../store/index";
 
-const url = "http://127.0.0.1:8000/api";
-//const url = "http://106.54.54.237:8000/api/h8";
+// const url = "http://127.0.0.1:8000/api";
+const url = "http://106.54.54.237:8000/api/h8";
 
 let config = {
   baseURL: url

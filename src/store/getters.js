@@ -5,4 +5,5 @@ export default {
   cartListLength: (state, getters) => getters.cartList.length,
   // 映射请求加载
   isLoading: state => state.isLoading
+
 };

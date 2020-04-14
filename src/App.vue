@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import TabBar from "@/components/common/tabbar/TabBar";
+import TabBar from "./components/common/tabbar/TabBar";
 
 export default {
   name: "App",
