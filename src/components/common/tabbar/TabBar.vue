@@ -17,27 +17,27 @@
 </template>
 
 <script>
-  export default {
-    name: "TabBar",
-    data() {
-      return {
-        active: 0
-      };
-    }
-  };
+export default {
+  name: "TabBar",
+  data() {
+    return {
+      active: 0
+    };
+  }
+};
 </script>
 
 <style scoped>
-  /deep/ .van-tabbar {
-    border-top: 1px solid #cccccc;
-    background-color: #f6f6f6;
-  }
+/deep/ .van-tabbar {
+  border-top: 1px solid #cccccc;
+  background-color: #f6f6f6;
+}
 
-  /deep/ .van-tabbar-item {
-    font-size: 13px;
-  }
+/deep/ .van-tabbar-item {
+  font-size: 13px;
+}
 
-  /deep/ .van-tabbar-item__icon {
-    font-size: 22px;
-  }
+/deep/ .van-tabbar-item__icon {
+  font-size: 22px;
+}
 </style>

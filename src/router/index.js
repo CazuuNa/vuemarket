@@ -20,7 +20,7 @@ import Home from "../views/home/Home";
 import Category from "../views/category/Category";
 import Cart from "../views/cart/Cart";
 import Profile from "../views/profile/Profile";
-// import ProductDetail from "../views/detail/ProductDetail";
+import ProductDetail from "../views/detail/ProductDetail";
 
 // 路由配置
 const routes = [
@@ -28,7 +28,7 @@ const routes = [
   { path: "/category", name: "category", component: Category },
   { path: "/cart", name: "cart", component: Cart },
   { path: "/profile", name: "profile", component: Profile },
-  // { path: "/detail/:id", name: "detail", component: ProductDetail },
+  { path: "/detail/:id", name: "detail", component: ProductDetail },
   { path: "*", redirect: "/" }
 ];
 

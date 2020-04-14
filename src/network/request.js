@@ -1,27 +1,44 @@
-import axios from 'axios'
+import axios from "axios";
+import { Toast } from "vant";
+import Loading from "../store/index";
 
-export function request(config) {
-  const instance = new axios.create({
-    //baseURL:'http://123.207.32.32:8000',
-    baseURL:'http://106.54.54.237:8000/api/h8',
-    timeout:5000
-  });
+const url = "http://127.0.0.1:8000/api";
+//const url = "http://106.54.54.237:8000/api/h8";
 
-  // 请求拦截器
-  instance.interceptors.request.use(config => {
-    //拦截后需要将拦截下来的请求数据返回发送
-    return config;
-  }, err => {
+let config = {
+  baseURL: url
+};
 
-  })
+const _axios = axios.create(config);
 
-  // 响应拦截器
-  instance.interceptors.response.use(res => {
-    // 拦截后需要将拦截下来处理成的结果返回
-    return res.data
-  }, err => {
-    console.log(err)
-  })
+// 请求拦截
+_axios.interceptors.request.use(
+  req => {
+    // 当getters里面的isLoading为true再显示请求加载
+    if (Loading.getters.isLoading) {
+      Toast.loading({
+        forbidClick: true,
+        message: "加载中..."
+      });
+    }
+    return req;
+  },
+  err => {
+    return Promise.reject(err);
+  }
+);
 
-  return instance(config)
-}
+// 响应拦截
+_axios.interceptors.response.use(
+  res => {
+    Toast.clear();
+    return res.data;
+  },
+  err => {
+    Toast.clear();
+    return Promise.reject(err);
+  }
+);
+
+// 全局注册axios
+window.axios = _axios;
